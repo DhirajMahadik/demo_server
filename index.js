@@ -39,7 +39,7 @@ app.delete('/api/delete-record/:id', (req, res) => {
                 res.send({ error: err })
             })
         }else{
-            res.status(400).send({err:"record not deleted or maybe it is not exist in your database"})
+            res.status(400).send({error:"record not deleted or maybe it is not exist in your database"})
         }
     }).catch((err)=>{
         console.log(err)
@@ -59,7 +59,7 @@ app.put('/api/update-data',(req,res)=>{
                 res.send({ error: err })
             })
         }else{
-            res.status(400).send({err:"Could not update or Updating with same data"})
+            res.status(400).send({error:"Could not update or Updating with same values"})
         }
     })
 })
